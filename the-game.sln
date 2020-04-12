@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "the-game", "the-game\the-game.vcxproj", "{5BED22DE-FDD8-4AFD-BE8C-3DC3921B1269}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4E6C61BC-4107-40D6-9DA7-C0E776AF93B4} = {4E6C61BC-4107-40D6-9DA7-C0E776AF93B4}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "the-game-lib", "the-game\the-game-lib.vcxproj", "{4E6C61BC-4107-40D6-9DA7-C0E776AF93B4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "the-game-ut", "the-game\the-game-ut.vcxproj", "{44F2F10A-B656-48CA-85F9-5689AAD2C0D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4E6C61BC-4107-40D6-9DA7-C0E776AF93B4} = {4E6C61BC-4107-40D6-9DA7-C0E776AF93B4}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
