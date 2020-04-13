@@ -9,7 +9,7 @@
 
 // https://www.sfml-dev.org/tutorials/2.5/
 
-// Картинки качал отсюда
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 // https://opengameart.org/content/2d-game-mage-character-sprite
 // https://opengameart.org/content/2d-game-orcs-sprite
 // https://opengameart.org/content/2d-game-knight-character-sprite
@@ -49,9 +49,9 @@ int main() {
     sf::Time elapsed = clock.restart();
     auto pos = player.Sprite().getPosition();
 
-    // Добавить класс Scene
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Scene
 
-    // Унести в класс Player
+    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ Player
     if (player.CanAttack()) {
       if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         bullets.push_back(
@@ -79,8 +79,8 @@ int main() {
       }
     }
 
-    // Враг столкнулся со снарядом
-    // Переписать на OnCollision(GameObject* a, GameObject* b);
+    // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ OnCollision(GameObject* a, GameObject* b);
     for (const auto& bullet : bullets) {
       if (bullet.Sprite().getGlobalBounds().intersects(
               enemy.Sprite().getGlobalBounds())) {

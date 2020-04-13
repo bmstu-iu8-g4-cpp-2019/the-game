@@ -1,12 +1,13 @@
 #pragma once
+#include <cmath>
 
 #include "GameObject.h"
 
 namespace rtf {
-  
+
 class Moveable : public GameObject {
- public:
-  Moveable(const std::string& textureFile);
+public:
+  Moveable(const std::string &textureFile);
 
   void ResetMoveDirection();
 
@@ -15,15 +16,15 @@ class Moveable : public GameObject {
   void MoveLeft();
   void MoveRight();
 
-  void MoveTo(const GameObject& target);
+  void MoveTo(const GameObject &target);
 
   void set_speed(float speed) { speed_ = speed; }
 
-  void Draw(sf::RenderWindow* window) override;
+  void Draw(sf::RenderWindow *window) override;
 
- private:
+private:
   float speed_ = 0.5;
   sf::Vector2f direction_;
 };
 
-}  // namespace rtf
+} // namespace rtf
