@@ -1,0 +1,6 @@
+[submodule "the-game/tools/polly"]
+	path = the-game/tools/polly
+	url = https://github.com/cpp-pm/polly
+[submodule "the-game/tools/gate"]
+	path = the-game/tools/gate
+	url = https://github.com/cpp-pm/gate
