@@ -130,6 +130,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Moveable.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -137,6 +138,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Moveable.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Scene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

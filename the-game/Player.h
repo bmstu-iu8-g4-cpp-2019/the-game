@@ -4,6 +4,8 @@
 
 namespace rtf {
 
+class Scene;
+
 class Player : public Moveable {
 
  public:
@@ -13,8 +15,11 @@ class Player : public Moveable {
 
   void Attack();
 
-  void Update(sf::RenderWindow* window, sf::Time time) override
-    ;
+  void Controls(Scene& scene);
+
+  void Update(sf::RenderWindow* window, sf::Time time) override;
+
+  void OnCollision(GameObject&) override;
  private:
   sf::Clock timer_;
   sf::Time cd_;

@@ -13,6 +13,7 @@ GameObject::GameObject(const GameObject& obj) {
   sprite_.setTexture(texture_);
   sprite_.setScale(obj.SCALE_FACTOR, obj.SCALE_FACTOR);
   SetPosition(obj.sprite_.getPosition());
+  tag_ = obj.tag_;
 }
 
 GameObject& GameObject::operator=(const GameObject& obj) {
@@ -22,6 +23,7 @@ GameObject& GameObject::operator=(const GameObject& obj) {
     sprite_.setTexture(texture_);
     sprite_.setScale(obj.SCALE_FACTOR, obj.SCALE_FACTOR);
     SetPosition(obj.sprite_.getPosition());
+    tag_ = obj.tag_;
   }
   return *this;
 }
@@ -41,3 +43,10 @@ void GameObject::Draw(sf::RenderWindow* window) { window->draw(sprite_); }
 void GameObject::Update(sf::RenderWindow* window, sf::Time time) {
   Draw(window);
 }
+
+void rtf::GameObject::OnCollision(GameObject& a, GameObject& b) {
+  a.OnCollision(b);
+  b.OnCollision(a);
+}
+
+void rtf::GameObject::OnCollision(GameObject& obj) {}

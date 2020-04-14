@@ -129,6 +129,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="enemy_ut.cpp" />
     <ClCompile Include="moveable-ut.cpp" />
     <ClCompile Include="ut\main.cpp" />
   </ItemGroup>
