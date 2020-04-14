@@ -1,4 +1,5 @@
 #include "Moveable.h"
+#include <cmath>
 
 using namespace rtf;
 
@@ -12,14 +13,14 @@ void Moveable::MoveLeft() { direction_.x += -speed_; }
 void Moveable::MoveRight() { direction_.x += speed_; }
 
 void Moveable::MoveTo(const GameObject& target) {
-  // Направление к движению.
+  // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
   auto direction = target.Sprite().getPosition() - Sprite().getPosition();
-  // Длина вектора.
+  // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
   auto len = std::sqrt(direction.x * direction.x + direction.y * direction.y);
-  // Вектор длины 1, по направлению к цели.
+  // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 1, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ.
   direction /= len;
 
-  // Еще и скорость задействуем.
+  // пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
   direction_ = direction * speed_;
 }
 
